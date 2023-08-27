@@ -1,34 +1,34 @@
-Blockly.JavaScript.forBlock['drawer_init'] = function(block, generator) {
+javascript.javascriptGenerator.forBlock['drawer_init'] = function(block, generator) {
   let code = 'drawer.init();\n';
   return code;
 };
 
-Blockly.JavaScript.forBlock['drawer_start'] = function(block, generator) {
+javascript.javascriptGenerator.forBlock['drawer_start'] = function(block, generator) {
   let code = '// このコードは自動生成されたものです。\n';
   return code;
 };
 
-Blockly.JavaScript.forBlock['drawer_color'] = function(block, generator) {
+javascript.javascriptGenerator.forBlock['drawer_color'] = function(block, generator) {
   let colour_color = block.getFieldValue('COLOR');
   let code = 'drawer.color("' + colour_color + '");\n';
   return code;
 };
 
-Blockly.JavaScript.forBlock['drawer_font'] = function(block, generator) {
+javascript.javascriptGenerator.forBlock['drawer_font'] = function(block, generator) {
   let number_size = block.getFieldValue('SIZE');
   let dropdown_font = block.getFieldValue('FONT');
   let code = 'drawer.font(' + number_size + ', "' + dropdown_font + '");\n';
   return code;
 };
 
-Blockly.JavaScript.forBlock['drawer_line'] = function(block, generator) {
+javascript.javascriptGenerator.forBlock['drawer_line'] = function(block, generator) {
   let text_points = block.getFieldValue('POINTS');
   let list = text_points.replaceAll(/\s+|,|\n+|\t+/g," ").trim().replaceAll(/\s+/g,",");
   let code = 'drawer.line(false,[' + list + ']);\n';
   return code;
 };
 
-Blockly.JavaScript.forBlock['drawer_oval'] = function(block, generator) {
+javascript.javascriptGenerator.forBlock['drawer_oval'] = function(block, generator) {
   let number_x = block.getFieldValue('X');
   let number_y = block.getFieldValue('Y');
   let number_xradius = block.getFieldValue('XRADIUS');
@@ -37,14 +37,14 @@ Blockly.JavaScript.forBlock['drawer_oval'] = function(block, generator) {
   return code;
 };
 
-Blockly.JavaScript.forBlock['drawer_area'] = function(block, generator) {
+javascript.javascriptGenerator.forBlock['drawer_area'] = function(block, generator) {
   let text_points = block.getFieldValue('POINTS');
   let list = text_points.replaceAll(/\s+|,|\n+|\t+/g," ").trim().replaceAll(/\s+/g,",");
   let code = 'drawer.line(true,[' + list + ']);\n';
   return code;
 };
 
-Blockly.JavaScript.forBlock['drawer_rect'] = function(block, generator) {
+javascript.javascriptGenerator.forBlock['drawer_rect'] = function(block, generator) {
   let number_x = block.getFieldValue('X');
   let number_y = block.getFieldValue('Y');
   let number_width = block.getFieldValue('WIDTH');
@@ -53,7 +53,7 @@ Blockly.JavaScript.forBlock['drawer_rect'] = function(block, generator) {
   return code;
 };
 
-Blockly.JavaScript.forBlock['drawer_text'] = function(block, generator) {
+javascript.javascriptGenerator.forBlock['drawer_text'] = function(block, generator) {
   let number_x = block.getFieldValue('X');
   let number_y = block.getFieldValue('Y');
   let text_text = block.getFieldValue('TEXT');

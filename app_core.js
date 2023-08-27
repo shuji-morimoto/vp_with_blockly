@@ -17,7 +17,7 @@ window.onload = () => {
         }
     );
 
-    Blockly.JavaScript.init(workspace);
+    javascript.javascriptGenerator.init(workspace);
     Blockly.serialization.workspaces.load(startupBlocks, workspace);
     document.getElementById("button0").addEventListener("click", _showWorkspaceBlocks);
     workspace.addChangeListener(_generateCode);
@@ -32,7 +32,7 @@ window.onload = () => {
     function _generateCode() {
         let output = document.getElementById("output");
         let start = workspace.getBlocksByType("drawer_start")[0];
-        let code = Blockly.JavaScript.blockToCode(start);
+        let code = javascript.javascriptGenerator.blockToCode(start);
         output.value = code;
         try {
             document.getElementById("output").value = code;
