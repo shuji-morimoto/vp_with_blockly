@@ -1,4 +1,4 @@
-window.onload = () => {
+window.onload = function() {
     Blockly.defineBlocksWithJsonArray(custom_blocks);
     workspace = Blockly.inject('blocklyDiv',
         {
